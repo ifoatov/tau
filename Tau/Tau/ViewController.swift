@@ -12,7 +12,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        print("View did load")
+        ServiceLocator.shared.networkService.getLocations { result in
+            switch result {
+            case .success(let locations):
+                locations.forEach{ print($0.id) }
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 
 
