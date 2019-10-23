@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import RxSwift
+import GoogleMaps
 
 class AppCoordinator : Coordinator {
     
@@ -18,10 +19,14 @@ class AppCoordinator : Coordinator {
     init() {
         window = UIWindow(frame: UIScreen.main.bounds)
         navController = UINavigationController()
+        GMSServices.provideAPIKey("AIzaSyB7hFzaG1NXE5dwsW73N027omQ8m8KsXck")
     }
     
     func start() {
-        let controller = ViewController()
+        let controller = MapModuleViewController()
+        let viewModel = MapModuleViewModel(networkService: ServiceLocator.shared.networkService,
+                                           locationService: ServiceLocator.shared.locationService)
+        controller.viewModel = viewModel
         window.rootViewController = navController
         navController.pushViewController(controller, animated: false)
         window.makeKeyAndVisible()

@@ -17,7 +17,7 @@ struct LocationInfo: Codable {
     let street: String
     let postalCode: String
     let coordinates: Coordinates
-    let rating: Int
+    let rating: Double
     let createdAt: String
     let openingHours: OpeningHours
     let numberOfStations: Int
@@ -40,7 +40,7 @@ struct LocationInfo: Codable {
         case createdAt = "created_at"
         case openingHours = "opening_hours"
         case numberOfStations = "number_of_stations"
-        case statuses = "statuses"
+        case statuses = "evse_statuses"
         case connectors = "connectors"
         case services = "services"
         case photos = "photos"

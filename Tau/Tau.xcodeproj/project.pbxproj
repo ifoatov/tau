@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B7FA94BC6F8E9742E3CD963 /* Pods_Tau.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C9B13509781D6387205E2D9 /* Pods_Tau.framework */; };
+		F818753E236587D60002EF58 /* ConnectorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F818753D236587D60002EF58 /* ConnectorType.swift */; };
 		F870B648235F6C6A0094883E /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870B647235F6C6A0094883E /* Coordinates.swift */; };
 		F870B64A235F6CCB0094883E /* EvseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870B649235F6CCB0094883E /* EvseStatus.swift */; };
 		F870B64C235F6E140094883E /* LocationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870B64B235F6E140094883E /* LocationInfo.swift */; };
@@ -25,7 +26,6 @@
 		F8A3BD33235E129A003E80F1 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A3BD32235E129A003E80F1 /* ServiceLocator.swift */; };
 		F8A3BD37235E3074003E80F1 /* LocationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A3BD36235E3074003E80F1 /* LocationEntity.swift */; };
 		F8E9AB8E235CD25F0060A5E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E9AB8D235CD25F0060A5E9 /* AppDelegate.swift */; };
-		F8E9AB92235CD25F0060A5E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E9AB91235CD25F0060A5E9 /* ViewController.swift */; };
 		F8E9AB97235CD2600060A5E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8E9AB96235CD2600060A5E9 /* Assets.xcassets */; };
 		F8E9AB9A235CD2600060A5E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8E9AB98235CD2600060A5E9 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -34,6 +34,7 @@
 		01D6757FDCA1882AC5062269 /* Pods-Tau.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tau.release.xcconfig"; path = "Target Support Files/Pods-Tau/Pods-Tau.release.xcconfig"; sourceTree = "<group>"; };
 		1515CE346BB805959B5DFF1D /* Pods-Tau.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tau.debug.xcconfig"; path = "Target Support Files/Pods-Tau/Pods-Tau.debug.xcconfig"; sourceTree = "<group>"; };
 		4C9B13509781D6387205E2D9 /* Pods_Tau.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tau.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F818753D236587D60002EF58 /* ConnectorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectorType.swift; sourceTree = "<group>"; };
 		F870B647235F6C6A0094883E /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 		F870B649235F6CCB0094883E /* EvseStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvseStatus.swift; sourceTree = "<group>"; };
 		F870B64B235F6E140094883E /* LocationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfo.swift; sourceTree = "<group>"; };
@@ -52,7 +53,6 @@
 		F8A3BD36235E3074003E80F1 /* LocationEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEntity.swift; sourceTree = "<group>"; };
 		F8E9AB8A235CD25F0060A5E9 /* Tau.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tau.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8E9AB8D235CD25F0060A5E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F8E9AB91235CD25F0060A5E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F8E9AB96235CD2600060A5E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8E9AB99235CD2600060A5E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8E9AB9B235CD2600060A5E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -135,6 +135,7 @@
 				F870B64F235F70340094883E /* Connector.swift */,
 				F870B651235F71E00094883E /* ServiceInfo.swift */,
 				F870B653235F72CF0094883E /* PhotoInfo.swift */,
+				F818753D236587D60002EF58 /* ConnectorType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -165,7 +166,6 @@
 				F8A3BD26235E0FCE003E80F1 /* Modules */,
 				F8A3BD21235E0E99003E80F1 /* Coordinators */,
 				F8E9AB8D235CD25F0060A5E9 /* AppDelegate.swift */,
-				F8E9AB91235CD25F0060A5E9 /* ViewController.swift */,
 				F8E9AB96235CD2600060A5E9 /* Assets.xcassets */,
 				F8E9AB98235CD2600060A5E9 /* LaunchScreen.storyboard */,
 				F8E9AB9B235CD2600060A5E9 /* Info.plist */,
@@ -312,9 +312,9 @@
 				F870B656235F78B30094883E /* NetworkService.swift in Sources */,
 				F870B654235F72CF0094883E /* PhotoInfo.swift in Sources */,
 				F8A3BD23235E0EAC003E80F1 /* AppCoordinator.swift in Sources */,
+				F818753E236587D60002EF58 /* ConnectorType.swift in Sources */,
 				F8A3BD37235E3074003E80F1 /* LocationEntity.swift in Sources */,
 				F8A3BD31235E1211003E80F1 /* LocationService.swift in Sources */,
-				F8E9AB92235CD25F0060A5E9 /* ViewController.swift in Sources */,
 				F8A3BD2B235E1037003E80F1 /* MapModuleView.swift in Sources */,
 				F870B652235F71E00094883E /* ServiceInfo.swift in Sources */,
 				F870B648235F6C6A0094883E /* Coordinates.swift in Sources */,

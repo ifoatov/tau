@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Parking: Codable {
+struct Parking: Codable  {
     let car: Bool
     let bike: Bool
 }
@@ -17,8 +17,8 @@ struct Connector: Codable {
     
     let id: String
     let locationId: String
-    let type: String //TODO create enum
-    let power: Int
+    let type: ConnectorType
+    let power: Double
     let current: String // TODO find out what is it
     let stationId: String
     let evseNumber: Int
@@ -26,7 +26,8 @@ struct Connector: Codable {
     let status: String // TODO create enum
     let statusUpdatedAt: String
     let operational: Bool
-    let parking: Parking
+    // TODO: ask type of parking
+//    let parking: Parking?
     let feePerMinute: Int
     let stationNumber: Int
     
@@ -42,7 +43,7 @@ struct Connector: Codable {
         case status = "status"
         case statusUpdatedAt = "status_updated_at"
         case operational = "operational"
-        case parking = "parking"
+//        case parking = "parking"
         case feePerMinute = "fee_per_minute"
         case stationNumber = "station_number"
         

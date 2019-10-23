@@ -12,7 +12,7 @@ struct ServiceInfo: Codable {
     
     let id: String
     let locationId: String
-    let typeId: String
+    let typeId: Int
     let name: String
     let summary: String //description
     let price: Int

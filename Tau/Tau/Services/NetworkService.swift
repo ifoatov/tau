@@ -50,10 +50,11 @@ final class NetworkService {
     }
     
     public func getLocationInfo(locationId: String, completion: @escaping (Result<LocationInfo, Error>) -> ()) {
-        guard let url = URL(string: Endponts.locations.rawValue + locationId) else {
+        guard let url = URL(string: Endponts.locationInfo.rawValue + locationId) else {
             completion(Result.failure(NetworkServiceError.badUrl))
             return
         }
+        print(url.absoluteString)
         self.urlSession.dataTask(with: url) { (data, _, error) in
             if let error = error {
                 completion(Result.failure(error))
@@ -67,6 +68,7 @@ final class NetworkService {
                 let result = try JSONDecoder().decode(LocationInfo.self, from: data)
                 completion(.success(result))
             } catch let error {
+                print(error)
                 completion(.failure(error))
             }
         }.resume()
